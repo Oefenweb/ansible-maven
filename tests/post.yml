@@ -1,0 +1,6 @@
+# post test file for maven
+---
+- name: run tests
+  command: >
+    {{ maven_install_prefix }}/apache-maven-{{ maven_version }}/bin/mvn -version
+  changed_when: false
