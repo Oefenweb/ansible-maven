@@ -1,0 +1,36 @@
+# tasks file for maven
+---
+- name: create (download) directory
+  file:
+    path: "{{ maven_downloads_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - configuration
+    - maven
+    - maven-download
+
+- name: download
+  get_url:
+    url: "http://apache.cs.uu.nl/maven/maven-{{ maven_version.split('.')[0] }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz"
+    dest: "{{ maven_downloads_path }}/apache-maven-{{ maven_version }}-bin.tar.gz"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - configuration
+    - maven
+    - maven-downloads
+
+- name: install
+  unarchive:
+    src: "{{ maven_downloads_path }}/apache-maven-{{ maven_version }}-bin.tar.gz"
+    dest: "{{ maven_install_prefix }}"
+    creates: "{{ maven_install_prefix }}/apache-maven-{{ maven_version }}"
+    copy: false
+  tags:
+    - configuration
+    - maven
+    - maven-install

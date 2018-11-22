@@ -1,0 +1,7 @@
+# test file for maven
+---
+- hosts: all
+  remote_user: vagrant
+  become: true
+  roles:
+    - ../../
