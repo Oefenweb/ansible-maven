@@ -1,6 +1,7 @@
 # meta file for maven
 ---
 galaxy_info:
+  role_name: maven
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.
   description: Set up Apache Ant
