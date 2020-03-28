@@ -1,6 +1,7 @@
 ## maven
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-maven.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-maven) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-maven-blue.svg)](https://galaxy.ansible.com/Oefenweb/maven)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-maven.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-maven)
+[![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-maven-blue.svg)](https://galaxy.ansible.com/Oefenweb/maven)
 
 Set up [Apache Maven](https://maven.apache.org/).
 
@@ -10,7 +11,7 @@ None
 
 #### Variables
 
-* `maven_version` [default: `3.6.0`]: Version to install
+* `maven_version` [default: `3.6.3`]: Version to install
 * `maven_install_prefix` [default: `/opt`]: Install prefix
 
 ## Dependencies
