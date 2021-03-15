@@ -1,4 +1,4 @@
-# tasks file for maven
+# tasks file
 ---
 - name: create (download) directory
   file:

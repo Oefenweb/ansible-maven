@@ -1,4 +1,4 @@
-# post test file for maven
+# post test file
 ---
 - name: post | run tests
   command: >
