@@ -35,7 +35,12 @@
     - maven
     - maven-install
 
-- name: post | run tests
+- name: verify
   command: >
     {{ maven_install_prefix }}/apache-maven-{{ maven_version }}/bin/mvn -version
   changed_when: false
+  tags:
+    - configuration
+    - maven
+    - maven-install
+    - maven-install-verify
