@@ -1,6 +1,6 @@
 ## maven
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-maven.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-maven)
+[![CI](https://github.com/Oefenweb/ansible-maven/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-maven/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-maven-blue.svg)](https://galaxy.ansible.com/Oefenweb/maven)
 
 Set up [Apache Maven](https://maven.apache.org/).
