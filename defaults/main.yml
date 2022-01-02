@@ -1,4 +1,4 @@
 # defaults file
 ---
-maven_version: 3.6.3
+maven_version: 3.8.4
 maven_install_prefix: /opt
