@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: create (download) directory
-  file:
+  ansible.builtin.file:
     path: "{{ maven_downloads_path }}"
     state: directory
     owner: root
@@ -13,7 +13,7 @@
     - maven-download
 
 - name: download
-  get_url:
+  ansible.builtin.get_url:
     url: "http://apache.cs.uu.nl/maven/maven-{{ maven_version.split('.')[0] }}/{{ maven_version }}/binaries/apache-maven-{{ maven_version }}-bin.tar.gz"
     dest: "{{ maven_downloads_path }}/apache-maven-{{ maven_version }}-bin.tar.gz"
     owner: root
@@ -25,7 +25,7 @@
     - maven-downloads
 
 - name: install
-  unarchive:
+  ansible.builtin.unarchive:
     src: "{{ maven_downloads_path }}/apache-maven-{{ maven_version }}-bin.tar.gz"
     dest: "{{ maven_install_prefix }}"
     creates: "{{ maven_install_prefix }}/apache-maven-{{ maven_version }}"
@@ -36,7 +36,7 @@
     - maven-install
 
 - name: verify
-  command: >
+  ansible.builtin.command: >
     {{ maven_install_prefix }}/apache-maven-{{ maven_version }}/bin/mvn -version
   changed_when: false
   tags:
