@@ -24,7 +24,7 @@ None
 ---
 - hosts: all
   roles:
-    - maven
+    - oefenweb.maven
 ```
 
 #### License
