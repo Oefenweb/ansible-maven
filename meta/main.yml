@@ -4,20 +4,21 @@ galaxy_info:
   author: oefenweb
   role_name: maven
   company: Oefenweb.nl B.V.
-  description: Set up Apache Ant
+  description: Set up Apache Maven
   license: MIT
   min_ansible_version: 2.10.0
   platforms:
     - name: Ubuntu
       versions:
-        - xenial
         - bionic
         - focal
+        - jammy
+        - noble
     - name: Debian
       versions:
-        - jessie
-        - stretch
         - buster
+        - bullseye
+        - bookworm
   galaxy_tags:
     - development
     - system
