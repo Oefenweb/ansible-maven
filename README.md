@@ -11,7 +11,7 @@ None
 
 #### Variables
 
-* `maven_version` [default: `3.9.9`]: Version to install
+* `maven_version` [default: `3.9.11`]: Version to install
 * `maven_install_prefix` [default: `/opt`]: Install prefix
 
 ## Dependencies
